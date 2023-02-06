@@ -3,19 +3,16 @@
 
     <item
         android:id="@+id/homeFragment"
-        android:enabled="true"
         android:icon="@drawable/ic_home"
         android:title="Home" />
     <item
         android:id="@+id/plantFragment"
-        android:enabled="true"
         android:icon="@drawable/ic_plant"
-        android:title="Appointment" />
+        android:title="Tree" />
     <item
         android:id="@+id/accountFragment"
-        android:enabled="true"
         android:icon="@drawable/ic_account"
-        android:title="Tracker" />
+        android:title="Account" />
 
 
 </menu>
