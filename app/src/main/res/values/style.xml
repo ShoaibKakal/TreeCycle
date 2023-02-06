@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
     <style name="body_text_1">
         <item name="android:textSize">14sp</item>
         <item name="fontFamily">@font/ubuntu_regular</item>
