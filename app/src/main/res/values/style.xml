@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Custom theming for bottom navigation view -->
+    <style name="Theme.App" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+    </style>
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="colorSurface">@color/white</item>
+
+        <item name="colorOnSurfaceVariant">@color/cardview_dark_background</item>
+        <item name="colorSecondaryContainer">@color/colorSecondary</item>
+    </style>
+
     <style name="body_text_1">
         <item name="android:textSize">14sp</item>
         <item name="fontFamily">@font/ubuntu_regular</item>
@@ -36,11 +52,5 @@
         <item name="android:includeFontPadding">false</item>
 
     </style>
-
-
-
-
-
-
 
 </resources>
