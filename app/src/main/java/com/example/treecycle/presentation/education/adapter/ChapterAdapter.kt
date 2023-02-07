@@ -8,11 +8,12 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.treecycle.R
+import com.example.treecycle.data.util.OnClickInterface
 import com.example.treecycle.data.util.colorList
 import com.google.android.material.card.MaterialCardView
 
 data class Chapter(val id: Int, val name: String, val progress: Int)
-class ChapterAdapter(val chapters: List<Chapter>) :
+class ChapterAdapter(val chapters: List<Chapter>, val onClickInterface: OnClickInterface<Chapter>) :
     RecyclerView.Adapter<ChapterAdapter.ChapterVH>() {
     class ChapterVH(view: View) : RecyclerView.ViewHolder(view) {
         val chapterName = view.findViewById<TextView>(R.id.tv_chapter_name)
@@ -59,6 +60,10 @@ class ChapterAdapter(val chapters: List<Chapter>) :
             holder.topLine.visibility = View.INVISIBLE
         } else if (position == chapters.size - 1) {
             holder.botomLine.visibility = View.INVISIBLE
+        }
+
+        holder.cardTimeLine.setOnClickListener {
+            onClickInterface.onClick(chapters[position])
         }
     }
 }
