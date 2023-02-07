@@ -56,4 +56,8 @@ dependencies {
     //Lottie
     implementation "com.airbnb.android:lottie:4.2.2"
 
+    //Because the YouTube Player API is old, it doesn’t have AndroidX support. But there is a fix for that!
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
 }
