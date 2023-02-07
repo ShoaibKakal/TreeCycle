@@ -78,6 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:layout_marginTop="12dp"
+        app:strokeWidth="0dp"
         app:cardCornerRadius="12dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -133,6 +134,7 @@
         android:id="@+id/card_climate_recycling"
         android:layout_width="match_parent"
         android:layout_height="180dp"
+        app:strokeWidth="0dp"
         android:layout_marginTop="12dp"
         app:cardCornerRadius="12dp">
 
@@ -144,7 +146,7 @@
                 android:id="@+id/iv_recycle_bg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="fitEnd"
+                android:scaleType="centerCrop"
                 android:src="@drawable/img_recycle_climate_change" />
 
             <TextView
