@@ -13,6 +13,7 @@ import com.example.treecycle.data.util.homeBanners
 import com.example.treecycle.databinding.FragmentHomeBinding
 import com.example.treecycle.presentation.education.EducationActivity
 import com.example.treecycle.presentation.home.adapter.SliderAdapter
+import com.example.treecycle.presentation.recycle.RecyclingActivity
 
 class HomeFragment : Fragment() {
 
@@ -42,6 +43,9 @@ class HomeFragment : Fragment() {
 
         binding.cardEducateMe.setOnClickListener {
             startActivity(Intent(requireActivity(), EducationActivity::class.java))
+        }
+        binding.cardRecycle.setOnClickListener {
+            startActivity(Intent(requireActivity(), RecyclingActivity::class.java))
         }
     }
 
