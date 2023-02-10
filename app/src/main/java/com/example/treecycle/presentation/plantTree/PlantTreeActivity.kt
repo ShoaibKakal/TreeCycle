@@ -43,7 +43,7 @@ class PlantTreeActivity : AppCompatActivity(), OnMapReadyCallback {
         /* Returns to plant fragment when btnPlantFinish is clicked. */
         binding.btnPlantFinish.setOnClickListener {
             binding.llBgLayer3.visibility = GONE
-            binding.finishButtonCard.visibility = GONE
+            binding.btnPlant.visibility = GONE
 
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

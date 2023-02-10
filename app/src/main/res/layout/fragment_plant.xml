@@ -36,21 +36,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:text="@string/around_you"
-                android:textSize="32sp" />
+                android:textSize="28sp" />
 
             <TextView
-                style="@style/body_text_1"
+                style="@style/text_heading_2"
+                android:textSize="14sp"
+                android:textColor="@color/gray"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/act_before_too_late"
-                android:textSize="16sp" />
+                android:text="@string/act_before_too_late" />
 
         </LinearLayout>
 
         <!-- Placeholder meter image -->
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="240dp"
+            android:layout_height="200dp"
 
             android:layout_marginTop="14dp"
             android:layout_marginBottom="2dp"
@@ -96,25 +97,21 @@
                         android:fontFamily="@font/ubuntu_medium"
 
                         android:gravity="center"
-                        android:layout_marginTop="20dp"
 
                         android:text="@string/co2_saved_number"
                         android:textColor="@color/colorAccent"
-                        android:textSize="54.63sp"
-                        android:textFontWeight="950" />
+                        android:textStyle="bold"
+                        android:textSize="50sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
                         android:gravity="center"
-                        android:layout_marginTop="30dp"
 
-                        android:fontFamily="@font/ubuntu_medium"
-                        android:textFontWeight="800"
+                        style="@style/text_heading_2"
                         android:text="@string/tons_of_co2_saved"
-                        android:textColor="@color/colorSecondary"
-                        android:textSize="20sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
 
@@ -142,8 +139,8 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
 
                         android:fontFamily="@font/ubuntu_medium"
                         android:gravity="center"
