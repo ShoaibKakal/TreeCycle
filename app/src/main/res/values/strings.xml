@@ -29,4 +29,16 @@
     <string name="see_my_forest">See my Forest...</string>
     <string name="climate_change_lengthy_process">Climate change is a lenghty process which requires small steps.</string>
 
+    <!-- Plant a Tree string content -->
+    <string name="plant_a_tree_2">Plant a Tree</string>
+    <string name="no_planet_b">Because there\'s no planet B</string>
+    <string name="tree_name">Tree name</string>
+    <string name="take_a_picture">Take a\npicture</string>
+    <string name="or_choose_manually">Or Choose Manually</string>
+    <string name="enter_date">Date (dd/mm/yy)</string>
+    <string name="enter_address">Address</string>
+    <string name="plant_button_text">Plant</string>
+    <string name="completed">Completed</string>
+    <string name="finish_text">Finish</string>
+
 </resources>

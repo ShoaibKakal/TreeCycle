@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 
 android {
@@ -59,6 +61,9 @@ dependencies {
 
     //Because the YouTube Player API is old, it doesn’t have AndroidX support. But there is a fix for that!
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Maps support
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
 
 
 }
