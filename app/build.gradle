@@ -65,5 +65,6 @@ dependencies {
     //Maps support
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
 
-
+    //Horizontal calendar module
+    implementation 'com.michalsvec:single-row-calednar:1.0.0'
 }

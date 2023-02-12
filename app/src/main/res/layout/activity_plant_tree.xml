@@ -234,6 +234,9 @@
             android:layout_height="70dp"
 
             android:layout_gravity="bottom"
+            android:shadowDx="0"
+            android:shadowDy="2"
+            android:shadowColor="@color/colorSecondary"
 
             android:layout_marginLeft="14dp"
             android:layout_marginTop="20dp"

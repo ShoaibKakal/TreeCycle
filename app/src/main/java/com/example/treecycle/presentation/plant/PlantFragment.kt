@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.treecycle.R
 import com.example.treecycle.databinding.FragmentPlantBinding
+import com.example.treecycle.presentation.forest.ForestActivity
 import com.example.treecycle.presentation.plantTree.PlantTreeActivity
 import com.google.android.material.card.MaterialCardView
 
@@ -32,8 +33,9 @@ class PlantFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        /* Accessing Plant A Tree card button via id.*/
+        /* Accessing card buttons via id.*/
         val plantATreeButton : MaterialCardView = view.findViewById(R.id.plantTreeCardButton)
+        val myForestCardButton: MaterialCardView = view.findViewById(R.id.myForestCardButton)
 
         plantATreeButton.setOnClickListener {
 
@@ -41,7 +43,12 @@ class PlantFragment : Fragment() {
             val intent = Intent(this.context, PlantTreeActivity::class.java)
             startActivity(intent)
         }
+
+        myForestCardButton.setOnClickListener {
+
+            /* Launching [ForestActivity]. */
+            val intent = Intent(this.context, ForestActivity::class.java)
+            startActivity(intent)
+        }
     }
-
-
 }

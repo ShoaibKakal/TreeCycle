@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <queries>
@@ -22,6 +22,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TreeCycle"
         tools:targetApi="31">
+        <activity
+            android:name=".presentation.forest.ForestActivity"
+            android:exported="false" />
         <activity
             android:name=".presentation.plantTree.PlantTreeActivity"
             android:exported="false"
