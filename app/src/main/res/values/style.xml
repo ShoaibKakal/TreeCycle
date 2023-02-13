@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Custom theming for bottom navigation view -->
-    <style name="Theme.App" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.App" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
     </style>
 
