@@ -11,7 +11,9 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.treecycle.data.util.homeBanners
 import com.example.treecycle.databinding.FragmentHomeBinding
+import com.example.treecycle.presentation.donations.DonationsActivity
 import com.example.treecycle.presentation.education.EducationActivity
+import com.example.treecycle.presentation.forest.ForestActivity
 import com.example.treecycle.presentation.home.adapter.SliderAdapter
 import com.example.treecycle.presentation.recycle.RecyclingActivity
 
@@ -46,6 +48,12 @@ class HomeFragment : Fragment() {
         }
         binding.cardRecycle.setOnClickListener {
             startActivity(Intent(requireActivity(), RecyclingActivity::class.java))
+        }
+        binding.cardDonation.setOnClickListener{
+            startActivity(Intent(requireActivity(), DonationsActivity::class.java))
+        }
+        binding.cardForest.setOnClickListener{
+            startActivity(Intent(requireActivity(), ForestActivity::class.java))
         }
     }
 
