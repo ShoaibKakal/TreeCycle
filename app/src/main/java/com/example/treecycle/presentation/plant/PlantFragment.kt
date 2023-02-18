@@ -40,14 +40,14 @@ class PlantFragment : Fragment() {
         plantATreeButton.setOnClickListener {
 
             /* Launching [PlantTreeActivity]. */
-            val intent = Intent(this.context, PlantTreeActivity::class.java)
+            val intent = Intent(requireActivity(), PlantTreeActivity::class.java)
             startActivity(intent)
         }
 
         myForestCardButton.setOnClickListener {
 
             /* Launching [ForestActivity]. */
-            val intent = Intent(this.context, ForestActivity::class.java)
+            val intent = Intent(requireActivity(), ForestActivity::class.java)
             startActivity(intent)
         }
     }

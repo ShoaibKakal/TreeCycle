@@ -12,6 +12,8 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import com.example.treecycle.R
 import com.example.treecycle.databinding.FragmentForestDetailBinding
+import com.example.treecycle.presentation.forest.adapters.CalendarAdapter
+import java.util.Date
 
 class ForestDetailFragment : Fragment() {
 
@@ -30,9 +32,8 @@ class ForestDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.backToForestButton.setOnClickListener {
-            view.findNavController().navigate(R.id.forestHomeFragment)
-        }
+        val dates = listOf("12", "13", "14", "15", "16")
+        binding.calendarRecyclerView.adapter = CalendarAdapter(requireActivity(), dates)
 
         binding.waterPlantButton.setOnClickListener {
             binding.llBgLayer4.visibility = VISIBLE

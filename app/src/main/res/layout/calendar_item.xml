@@ -8,6 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
+        android:layout_margin="12dp"
+
         app:cardCornerRadius="100dp"
         app:strokeWidth="0dp"
 
@@ -33,16 +35,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 style="@style/body_text_1"
-                android:text="January"/>
+                android:text="Jan"/>
 
         </LinearLayout>
 
-
-
-
-
     </com.google.android.material.card.MaterialCardView>
-
-
-
 </FrameLayout>

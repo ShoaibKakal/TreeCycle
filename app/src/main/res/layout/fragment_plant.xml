@@ -49,18 +49,31 @@
         </LinearLayout>
 
         <!-- Placeholder meter image -->
-        <ImageView
+
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
 
             android:layout_marginTop="14dp"
             android:layout_marginBottom="2dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
 
-            android:scaleType="fitXY"
+            app:strokeWidth="0dp"
 
-            android:src="@drawable/bq_img_meter" />
+            app:cardCornerRadius="18dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+
+                android:scaleType="center"
+                android:background="@color/colorAccent"
+
+                android:visibility="visible"
+
+                android:src="@drawable/ic_logo" />
+        </com.google.android.material.card.MaterialCardView>
 
         <!-- Layout hosting two cards horizontally  -->
         <LinearLayout
@@ -175,6 +188,7 @@
 
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
 
             app:cardBackgroundColor="@color/colorPrimary"
 
@@ -204,6 +218,8 @@
 
                     <TextView
                         android:layout_width="230dp"
+                        style="@style/body_text_1"
+                        android:textSize="14sp"
                         android:layout_height="wrap_content"
                         android:text="@string/climate_change_lengthy_process" />
 
