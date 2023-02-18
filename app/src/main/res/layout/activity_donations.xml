@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!-- Donations screen view -->
-<ScrollView
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
+    android:scrollbars="none"
     tools:context=".presentation.donations.DonationsActivity">
 
     <LinearLayout
@@ -45,7 +46,7 @@
             <ImageView
                 android:layout_width="300dp"
                 android:layout_gravity="center"
-                android:layout_height="300dp"
+                android:layout_height="220dp"
                 android:scaleType="center"
                 android:src="@drawable/img_cash"/>
 
@@ -80,7 +81,7 @@
                                 style="@style/text_heading_1"
                                 android:layout_width="40dp"
                                 android:layout_height="match_parent"
-                                android:layout_marginLeft="22dp"
+                                android:layout_marginLeft="12dp"
                                 android:gravity="center"
                                 android:src="@drawable/ic_verified_badge"
                                 android:text="6"
@@ -90,7 +91,6 @@
                             <TextView
                                 style="@style/body_text_1"
                                 android:layout_width="wrap_content"
-                                android:layout_marginLeft="8dp"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
                                 android:text="verified origanizations" />
@@ -209,4 +209,4 @@
         </LinearLayout>
 
 
-</ScrollView>
+</androidx.core.widget.NestedScrollView>

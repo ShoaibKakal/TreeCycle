@@ -30,10 +30,6 @@ class ForestDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.backToForestButton.setOnClickListener {
-            view.findNavController().navigate(R.id.forestHomeFragment)
-        }
-
         binding.waterPlantButton.setOnClickListener {
             binding.llBgLayer4.visibility = VISIBLE
         }

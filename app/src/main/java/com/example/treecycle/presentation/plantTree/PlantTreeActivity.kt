@@ -44,9 +44,6 @@ class PlantTreeActivity : AppCompatActivity(), OnMapReadyCallback {
         binding.btnPlantFinish.setOnClickListener {
             binding.llBgLayer3.visibility = GONE
             binding.btnPlant.visibility = GONE
-
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
         }
 
         /* Instantiating a support fragment for map*/

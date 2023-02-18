@@ -15,6 +15,7 @@
 
         <item name="colorOnSurfaceVariant">@color/cardview_dark_background</item>
         <item name="colorSecondaryContainer">@color/colorSecondary</item>
+        <item name="textFillColor">@color/cardview_light_background</item>
     </style>
 
     <style name="body_text_1">
