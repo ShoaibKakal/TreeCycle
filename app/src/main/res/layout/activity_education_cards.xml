@@ -41,7 +41,7 @@
             android:ellipsize="end"
             android:gravity="center"
             android:maxLines="1"
-            android:text="Introduction To Climate Change"
+            android:text="Climate Change"
             android:textColor="@color/colorText"
             android:textSize="18sp" />
 
