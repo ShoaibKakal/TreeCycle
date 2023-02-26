@@ -28,6 +28,9 @@ class EducationActivity : AppCompatActivity() {
         binding.cardClimateChange.setOnClickListener {
             startActivity(Intent(this, EducationChaptersActivity::class.java))
         }
+        binding.cardClimateRecycling.setOnClickListener {
+            startActivity(Intent(this, EducationRecyclingChaptersActivity::class.java))
+        }
 
     }
 
