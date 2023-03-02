@@ -10,6 +10,7 @@ import com.example.treecycle.data.util.climateChangeChapters
 import com.example.treecycle.data.util.recyclingChapters
 import com.example.treecycle.databinding.ActivityEducationCardsBinding
 import com.example.treecycle.databinding.ActivityEducationRecyclingCardsBinding
+import com.example.treecycle.presentation.education.adapter.Chapter
 
 class EducationRecyclingCardsActivity : AppCompatActivity() {
 
@@ -18,7 +19,10 @@ class EducationRecyclingCardsActivity : AppCompatActivity() {
     }
 
     var counter = 0
+    var progressValue: Int = 0
+    lateinit var string: String;
     lateinit var chapterCard: ArrayList<ChapterCard>
+    lateinit var selectedChapter: Chapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -29,8 +33,11 @@ class EducationRecyclingCardsActivity : AppCompatActivity() {
         for (cd in recyclingChapters){
             if(cd.name == string){
                 chapterCard = cd.chapterCards
+                selectedChapter = cd
             }
         }
+
+        binding.progressHorizontal.progress = selectedChapter.progress
 
         Log.d("SecondScreenData", string)
 
@@ -42,6 +49,10 @@ class EducationRecyclingCardsActivity : AppCompatActivity() {
                 counter++
                 binding.tvHashtag.text = chapterCard[counter].hashTag
                 binding.tvContent.text = chapterCard[counter].content
+
+                progressValue += (100 / chapterCard.size)
+                binding.progressHorizontal.progress = progressValue
+                selectedChapter.progress = progressValue
             } else {
                 binding.llBgLayer1.visibility = View.VISIBLE
                 binding.llBgLayer2.visibility = View.VISIBLE
@@ -55,6 +66,14 @@ class EducationRecyclingCardsActivity : AppCompatActivity() {
                 counter--
                 binding.tvHashtag.text = chapterCard[counter].hashTag
                 binding.tvContent.text = chapterCard[counter].content
+
+                progressValue -= (100 / chapterCard.size)
+                binding.progressHorizontal.progress = progressValue
+                selectedChapter.progress = progressValue
+
+                progressValue += (100 / chapterCard.size)
+                binding.progressHorizontal.progress = progressValue
+                selectedChapter.progress = progressValue
             }
         }
 

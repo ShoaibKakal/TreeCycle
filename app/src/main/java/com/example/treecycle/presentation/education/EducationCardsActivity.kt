@@ -38,9 +38,7 @@ class EducationCardsActivity : AppCompatActivity() {
         }
 
         binding.progressHorizontal.progress = selectedChapter.progress
-
-
-            Log.d("chapter", selectedChapter.name)
+        Log.d("chapter", selectedChapter.name)
 
         binding.tvHashtag.text = chapterCard[counter].hashTag
         binding.tvContent.text = chapterCard[counter].content
