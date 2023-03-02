@@ -17,22 +17,30 @@ class EducationCardsActivity : AppCompatActivity() {
     }
 
     var counter = 0
+    var progressValue: Int = 0
+    lateinit var string: String;
     lateinit var chapterCard: ArrayList<ChapterCard>
+    lateinit var selectedChapter: Chapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
         val bundle = intent?.extras
-        val string = bundle?.getString("KEY").toString()
+        string = bundle?.getString("KEY").toString()
 
-        for (cd in climateChangeChapters){
-            if(cd.name == string){
+
+        for (cd in climateChangeChapters) {
+            if (cd.name == string) {
                 chapterCard = cd.chapterCards
+                selectedChapter = cd
             }
         }
 
+        binding.progressHorizontal.progress = selectedChapter.progress
 
-        Log.d("SecondScreenData", string)
+
+            Log.d("chapter", selectedChapter.name)
 
         binding.tvHashtag.text = chapterCard[counter].hashTag
         binding.tvContent.text = chapterCard[counter].content
@@ -42,6 +50,12 @@ class EducationCardsActivity : AppCompatActivity() {
                 counter++
                 binding.tvHashtag.text = chapterCard[counter].hashTag
                 binding.tvContent.text = chapterCard[counter].content
+
+                progressValue += (100 / chapterCard.size)
+                binding.progressHorizontal.progress = progressValue
+                selectedChapter.progress = progressValue
+
+                Log.d("chapter",selectedChapter.progress.toString())
             } else {
                 binding.llBgLayer1.visibility = View.VISIBLE
                 binding.llBgLayer2.visibility = View.VISIBLE
@@ -55,13 +69,21 @@ class EducationCardsActivity : AppCompatActivity() {
                 counter--
                 binding.tvHashtag.text = chapterCard[counter].hashTag
                 binding.tvContent.text = chapterCard[counter].content
+
+                progressValue -= (100 / chapterCard.size)
+                binding.progressHorizontal.progress = progressValue
+                selectedChapter.progress = progressValue
             }
         }
 
         binding.btnContinueLearning.setOnClickListener {
+            progressValue += (100 / chapterCard.size)
+            binding.progressHorizontal.progress = progressValue
+            selectedChapter.progress = progressValue
+
+            Log.d("chapter",selectedChapter.progress.toString())
             finish()
         }
 
     }
-
 }

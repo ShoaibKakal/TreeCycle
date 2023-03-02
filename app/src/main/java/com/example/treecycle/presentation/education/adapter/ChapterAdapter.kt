@@ -14,7 +14,7 @@ import com.example.treecycle.data.util.colorList
 import com.google.android.material.card.MaterialCardView
 import java.io.Serializable
 
-data class Chapter(val id: Int, val name: String, val progress: Int, val chapterCards: ArrayList<ChapterCard>)
+data class Chapter(val id: Int, val name: String, var progress: Int, val chapterCards: ArrayList<ChapterCard>)
 class ChapterAdapter(val chapters: List<Chapter>, val onClickInterface: OnClickInterface<Chapter>) :
     RecyclerView.Adapter<ChapterAdapter.ChapterVH>() {
     class ChapterVH(view: View) : RecyclerView.ViewHolder(view) {
