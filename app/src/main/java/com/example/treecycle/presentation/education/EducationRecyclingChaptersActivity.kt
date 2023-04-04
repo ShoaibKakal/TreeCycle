@@ -1,30 +1,31 @@
 package com.example.treecycle.presentation.education
 
 import android.content.Intent
-import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.example.treecycle.R
 import com.example.treecycle.data.util.OnClickInterface
 import com.example.treecycle.data.util.climateChangeChapters
-import com.example.treecycle.databinding.ActivityEducationChaptersBinding
+import com.example.treecycle.data.util.recyclingChapters
+import com.example.treecycle.databinding.ActivityEducationRecyclingChaptersBinding
 import com.example.treecycle.presentation.education.adapter.Chapter
 import com.example.treecycle.presentation.education.adapter.ChapterAdapter
 
-class EducationChaptersActivity : AppCompatActivity(), OnClickInterface<Chapter> {
+class EducationRecyclingChaptersActivity : AppCompatActivity(), OnClickInterface<Chapter> {
 
-    private val binding: ActivityEducationChaptersBinding by lazy {
-        ActivityEducationChaptersBinding.inflate(layoutInflater)
-    }
+    private lateinit var binding: ActivityEducationRecyclingChaptersBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        binding = ActivityEducationRecyclingChaptersBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.rvChapters.adapter = ChapterAdapter(climateChangeChapters,this)
+
+        binding.rvChapters2.adapter = ChapterAdapter(recyclingChapters, this)
     }
 
     override fun onClick(item: Chapter) {
-        val intent = Intent(this, EducationCardsActivity::class.java)
+        val intent = Intent(this, EducationRecyclingCardsActivity::class.java)
         intent.putExtra("KEY", item.name)
         startActivity(intent)
     }

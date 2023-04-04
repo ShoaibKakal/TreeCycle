@@ -23,6 +23,12 @@
         android:theme="@style/Theme.TreeCycle"
         tools:targetApi="31">
         <activity
+            android:name=".presentation.education.EducationRecyclingCardsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.education.EducationRecyclingChaptersActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.donations.DonationsActivity"
             android:exported="false" />
         <activity
